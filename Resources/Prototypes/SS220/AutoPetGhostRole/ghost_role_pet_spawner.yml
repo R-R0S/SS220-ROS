@@ -225,3 +225,18 @@
   - type: ConditionalSpawner
     prototypes:
       - MobEN
+
+# SS220 engineer cat
+- type: entity
+  name: Engineer cat spawner
+  id: SpawnEngineerCatGhostRole
+  parent: MarkerBase
+  suffix: Роль
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ai
+  - type: ConditionalSpawner
+    prototypes:
+    - MobEngineerCatGhostRole

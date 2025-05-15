@@ -36,3 +36,110 @@
     - CannotSuicide
     - VimPilot
     - DoorBumpOpener
+
+# SS220 Engineer cat
+- type: entity
+  name: "Борис"
+  parent: MobCatSpace
+  id: MobEngineerCat
+  description: "Это же котик-инженер!"
+  components:
+  - type: Sprite
+    sprite: SS220/Mobs/Pets/space_capybara.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: spacecapybara2
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: spacecapybara2
+      Critical:
+        Base: caracal_dead
+      Dead:
+        Base: caracal_dead
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 40
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  #SS220 languages revive begin
+  - type: Language
+    availableLanguages:
+    - id: Galactic
+      canSpeak: false
+    - id: Siiktajr
+      canSpeak: false
+  #SS220 languages revive end
+  - type: Storage
+    defaultStorageOrientation: Vertical
+    clickInsert: true
+    openOnActivate: true
+    grid:
+    - 0,0,3,2
+    maxItemSize: Small
+    whitelist:
+      tags:
+        - Powerdrill
+        - Wirecutter
+        - Crowbar
+        - Screwdriver
+        - Flashlight
+        - Wrench
+        - GeigerCounter
+        - Flare
+        - CableCoil
+        - CigPack
+        - Radio
+        - HolofanProjector
+        - Multitool
+        - AppraisalTool
+        - JawsOfLife
+        - GPS
+        - WeldingMask
+      components:
+        - StationMap
+        - SprayPainter
+        - NetworkConfigurator
+        # - RCD
+        - RCDAmmo
+        - Welder
+        - PowerCell
+        - Geiger
+        - TrayScanner
+        - GasAnalyzer
+        - HandLabeler
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+      enum.HumanoidMarkingModifierKey.Key:
+        type: HumanoidMarkingModifierBoundUserInterface
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+  # - type: UseDelay
+  #   delay: 0.5
+  - type: Grammar
+    attributes:
+      gender: male
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - VimPilot
+    - DoorBumpOpener
+  - type: Access
+    tags:
+    - Engineering
+    - Maintenance
+    - External
+  - type: Puller
+    needsHands: false

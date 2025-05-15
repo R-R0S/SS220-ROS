@@ -98,3 +98,9 @@ ghost-role-information-pet-steven-description = Питомец Магистра�
 
 ghost-role-information-taxibot-name = { ent-MobTaxiBot }
 ghost-role-information-taxibot-description = { ent-MobTaxiBot.desc }
+
+ent-MobEngineerCatPetGhostRole = { ent-MobEngineerCatPet }
+    .desc = { ent-MobEngineerCatPet.desc }
+ent-SpawnMobEngineerCatPetGhostRole = Спавнер { ent-MobEngineerCatPet }
+ghost-role-information-pet-engineercat-name = { ent-MobEngineerCatPet }
+ghost-role-information-pet-engineercat-description = { ent-MobEngineerCat.desc }
