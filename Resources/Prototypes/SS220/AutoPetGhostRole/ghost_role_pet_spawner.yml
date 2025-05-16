@@ -226,10 +226,10 @@
     prototypes:
       - MobEN
 
-# SS220 engineer cat
+# SS220 engineer capybara
 - type: entity
-  name: Engineer cat spawner
-  id: SpawnEngineerCatGhostRole
+  name: Engineer capybara spawner
+  id: SpawnCapybaraGhostRole
   parent: MarkerBase
   suffix: Роль
   components:
@@ -239,4 +239,4 @@
     - state: ai
   - type: ConditionalSpawner
     prototypes:
-    - MobEngineerCatGhostRole
+    - MobCapybaraGhostRole

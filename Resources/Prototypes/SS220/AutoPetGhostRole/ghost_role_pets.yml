@@ -221,10 +221,10 @@
       time: 14400 # SS220 - 4 hours
   - type: GhostTakeoverAvailable
 
-# SS220 engineer cat
+# SS220 engineer capybara
 - type: entity
-  parent: MobEngineerCat
-  id: MobEngineerCatGhostRole
+  parent: MobCapybara
+  id: MobCapybaraGhostRole
   suffix: Роль
   components:
   - type: GhostRole
@@ -232,6 +232,6 @@
     allowSpeech: true
     allowMovement: true
     name: ghost-role-information-pet-engineercat-name
-    description: "Вы любознательный и всегда активынй кот, живущий в инженерном отделе и помогающий своим друзьям-инженерам."
+    description: "Вы дрессированная капибара, живущая в инженерном отделе и помогающая своим друзьям-инженерам."
     rules: "Вы вполне способны понимать, когда вас о чем-то просят и можете выполнять команды инженеров, делая это не осмысленно"
   - type: GhostTakeoverAvailable

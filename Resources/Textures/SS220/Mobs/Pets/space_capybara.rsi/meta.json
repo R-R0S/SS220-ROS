@@ -8,6 +8,10 @@
   },
   "states": [
     {
+      "name": "spacecapybara1",
+      "directions": 4
+    },
+	{
       "name": "spacecapybara2",
       "directions": 4
     },

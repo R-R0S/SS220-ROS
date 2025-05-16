@@ -160,3 +160,15 @@
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
+
+# Space capybara
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadSpaceCapybara
+  categories: [ HideSpawnMenu ]
+  name: Space Capybara helmet
+  components:
+  - type: Sprite
+    sprite: SS220/Clothing/Head/Hardsuits/space_capybara.rsi
+  - type: Clothing
+    sprite: SS220/Clothing/Head/Hardsuits/space_capybara.rsi

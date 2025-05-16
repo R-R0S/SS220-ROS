@@ -39,20 +39,20 @@
 
 # SS220 Engineer cat
 - type: entity
-  name: "Борис"
+  name: "Капибара"
   parent: MobCatSpace
-  id: MobEngineerCat
-  description: "Это же котик-инженер!"
+  id: MobCapybara
+  description: "Это же капибара-инженер!"
   components:
   - type: Sprite
     sprite: SS220/Mobs/Pets/space_capybara.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      state: spacecapybara2
+      state: spacecapybara1
   - type: DamageStateVisuals
     states:
       Alive:
-        Base: spacecapybara2
+        Base: spacecapybara1
       Critical:
         Base: caracal_dead
       Dead:
@@ -73,15 +73,15 @@
     availableLanguages:
     - id: Galactic
       canSpeak: false
-    - id: Siiktajr
-      canSpeak: false
+    # - id: Siiktajr
+    #   canSpeak: false
   #SS220 languages revive end
   - type: Storage
     defaultStorageOrientation: Vertical
     clickInsert: true
     openOnActivate: true
     grid:
-    - 0,0,3,2
+    - 0,0,3,1
     maxItemSize: Small
     whitelist:
       tags:
@@ -114,10 +114,17 @@
         - TrayScanner
         - GasAnalyzer
         - HandLabeler
-  - type: ContainerContainer
-    containers:
-      storagebase: !type:Container
-        ents: []
+  # - type: ToggleableClothing
+  #   action: !type:ToggleClothingEvent
+  #   requiredSlot: head
+  #   slot: head
+  #   clothingPrototype: ClothingHeadSpaceCapybara
+  # - type: InstantAction
+  #   name: "Переключить шлем"
+  #   description: "Надеть/снять шлем"
+  #   icon: SS220/Clothing/Head/Hardsuits/capybara.rsi/icon.png
+  #   event: !type:ToggleClothingEvent
+  #   clientExclusive: false
   - type: UserInterface
     interfaces:
       enum.StorageUiKey.Key:
@@ -126,8 +133,6 @@
         type: HumanoidMarkingModifierBoundUserInterface
       enum.StrippingUiKey.Key:
         type: StrippableBoundUserInterface
-  # - type: UseDelay
-  #   delay: 0.5
   - type: Grammar
     attributes:
       gender: male
@@ -143,3 +148,9 @@
     - External
   - type: Puller
     needsHands: false
+  - type: Inventory
+    templateId: spaceCapybara
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
